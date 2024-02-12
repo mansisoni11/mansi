@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 // server used to send send emails
 const app = express();
@@ -12,11 +13,13 @@ app.listen(5000, () => console.log("Server Running"));
 
 
 const contactEmail = nodemailer.createTransport({
+  debug: true,
   service: 'gmail',
   auth: {
     user: "soniimansi22@gmail.com",
     pass: "hrki jftm afbv qoda"
   },
+   authMethod: 'login'
 });
 
 contactEmail.verify((error) => {
