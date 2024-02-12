@@ -25,6 +25,7 @@ export const Projects = () => {
       title: "FOOD PARADISE",
       description: "A demo website formed in angular",
       imgUrl: projImg1,
+      
     },
     {
       title: "image classifier",
@@ -94,6 +95,10 @@ export const Projects = () => {
     }
   ];
 
+  const handleProjectClick = (githubLink) => {
+    window.open(githubLink, "_blank"); 
+  };
+
   return (
     <section className="project" id="project">
       <Container>
@@ -125,6 +130,7 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
+                                onClick={() => handleProjectClick(project.githubLink)}
                                 />
                             )
                           })
@@ -147,7 +153,7 @@ export const Projects = () => {
                   </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                     
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
