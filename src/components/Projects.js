@@ -118,7 +118,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">Experience</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">About Myself</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -153,7 +153,9 @@ export const Projects = () => {
                   </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                     
+                     <p>Hello! I'm Mansi, a dedicated full-stack developer driven by a passion for innovation and problem-solving. My journey in software development began with internships at Experiencious, Trakky, and MarsCapital, where I gained hands-on experience in a diverse range of technologies. At Experiencious, I immersed myself in Flutter development, contributing to the creation of intuitive and engaging applications. Transitioning to Trakky, I delved into WordPress development, refining my skills in crafting dynamic and visually appealing websites. At MarsCapital, I embraced Angular, collaborating on the development of robust web applications. Additionally, as a SAP trainee, I've expanded my expertise in enterprise resource planning systems.
+<br/>
+                     I thrive on challenges and am committed to continuous learning and growth. Whether it's through leveraging emerging technologies or tackling complex problems, I'm always eager to push the boundaries of what's possible. My goal is to create meaningful and impactful experiences through software development, and I'm excited about the prospect of collaborating with like-minded individuals and teams to bring innovative ideas to life. Let's embark on this journey together and build something extraordinary!</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
