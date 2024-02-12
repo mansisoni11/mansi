@@ -6,6 +6,14 @@ import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
 import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/4.png";
+import projImg8 from "../assets/img/5.png";
+import projImg9 from "../assets/img/6.png";
+import projImg10 from "../assets/img/7.png";
+import exp from "../assets/img/1.png";
+import trakky from "../assets/img/2.png";
+import marscapital from "../assets/img/3.png";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -43,6 +51,47 @@ export const Projects = () => {
       description: "dashboard build in react",
       imgUrl: projImg6,
     },
+    {
+      title: "NewsMonkey",
+      description: "A react based app that shows you top news",
+      imgUrl: projImg7,
+    },
+    {
+      title: "Weather App",
+      description: "Forecasting Tomorrow: Building a Python-Based Weather Website",
+      imgUrl: projImg8,
+    },
+    {
+      title: "Reamazon",
+      description: "Building a Seamless Shopping Experience: A MERN-based Amazon Clone",
+      imgUrl: projImg9,
+    },
+    {
+      title: "Google-Clone",
+      description: "Building a Seamless Experience: A React-based Google-Clone",
+      imgUrl: projImg10,
+    },
+  ];
+
+  const Experience=[
+    {
+      title:"Full Stack Developer",
+      company:"Experiencious",
+      Month:" January 2024 - current",
+      imgUrl:exp,
+    },
+    {
+      title:"Wordpress Developer and graphic designer",
+      company:"Trakky",
+      Month:" January 2023 - April 2023",
+      imgUrl:trakky,
+    },
+    {
+      title:"Frontend  Developer",
+      company:"MarsCapital",
+      Month:" July 2022 - September 2022",
+      imgUrl:marscapital
+    }
   ];
 
   return (
@@ -54,7 +103,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Crafting Inspiration: A Personal Odyssey through Creative Projects</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -82,8 +131,20 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                    <p>Experiences</p>
+                    <Row>
+                    {
+                      Experience.map((Experience, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...Experience}
+                            />
+                        )
+                      })
+                    }
+                  </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>

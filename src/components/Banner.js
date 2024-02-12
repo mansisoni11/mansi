@@ -22,6 +22,11 @@ export const Banner = () => {
     return () => { clearInterval(ticker) };
   }, [text])
 
+  const handleConnectClick = () => {
+    console.log('connect');
+    // Replace 'YOUR_LINKEDIN_PROFILE_URL' with your actual LinkedIn profile URL
+    window.open('https://www.linkedin.com/in/mansi-soni-5a6454212/', '_blank');
+  };
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -57,19 +62,20 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Mansi`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer, ai enthusiast" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Pre final year student, Receptive ,constantly interested in new technology</p>
+                  <p> I am a Final year student, Receptive ,constantly interested in new technology</p>
                   <p>I have learned to be very hard-working as well as passionate about my career from the very core. Since my childhood, I have always been trained to focus on my passion.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={handleConnectClick}>Let’s Connect <ArrowRightCircle size={25} /></button>
                   <button className="button" >
                   <a
                    className="button"
-                   href="https://drive.google.com/drive/folders/1122eQItozZSbtoYAejhhynKzCd0VhGgb?usp=sharing"
+                   href="https://drive.google.com/file/d/1h8apMewlOftOyIaHM2s4KB_7T35ESToF/view?usp=sharing"
                    >
                    Resume
                    <ArrowRightCircle size={25} />
                   </a>
                   </button>
-              </div>}
+              </div>
+            }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
